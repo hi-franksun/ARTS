@@ -21,9 +21,9 @@ class Solution:
 
 
 class TestSolution:
-    test_data = ([1, 1, 2], 2)
-    assert_data =  ([0, 0, 1, 1, 1, 2, 2, 3, 3, 4], 5)
+    test_data_one = ([1, 1, 2], 2)
+    test_data_two =  ([0, 0, 1, 1, 1, 2, 2, 3, 3, 4], 5)
 
-    @pytest.mark.parametrize('test_data, assert_data', [test_data, assert_data])
-    def test_remove_duplicates(self, test_data, assert_data):
-        assert Solution().remove_duplicates(test_data) == assert_data
+    @pytest.mark.parametrize('input_data, assert_data', [test_data_one, test_data_two])
+    def test_remove_duplicates(self, input_data, assert_data):
+        assert Solution().remove_duplicates(input_data) == assert_data
